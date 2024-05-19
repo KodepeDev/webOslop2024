@@ -1,0 +1,105 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import AnnouncementBanner from "@/components/ui/banners/AnnouncementBanner.astro";
+import HeroSection from "@components/sections/landing/HeroSection.astro";
+import heroAboutImage from "@images/servicios/feature_about.png";
+import SectionContent from "@/components/ui/blocks/SectionContent.astro";
+import HeroSectionAlt from "@/components/sections/landing/HeroSectionAlt.astro";
+import { SITE } from "@data/constants";
+
+const pageTitle: string = `Sobre Nosotros | ${SITE.title}`;
+---
+
+<MainLayout
+  title={pageTitle}
+  structuredData={{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://osloptelcom.com/about",
+    url: "https://osloptelcom.com/about",
+    name: "Sobre Nosotros | Oslop Telcom",
+    description:
+      "Conoce acerca de los servicios de aire acondicionado mas populares en Perú.",
+    isPartOf: {
+      "@type": "WebSite",
+      url: "https://osloptelcom.com",
+      name: "Oslop Telcom",
+      description:
+        "Oslop Telcom ofrecemos los mejores servicios de Aire Acondicionado refrigeración y calefacción.",
+    },
+    inLanguage: "en-US",
+  }}
+>
+  <AnnouncementBanner
+    btnId="dismiss-button"
+    btnTitle="WhatsApp"
+    url="https://github.com/mearashadowfax/ScrewFast"
+  />
+
+  <HeroSection
+    title=`<span class="text-orange-500 dark:text-orange-400">Oslop Telcom</span> Expertos en Refrigeración y Calefacción `
+    subTitle="En Oslop Telcom, somos una Empresa de Aire Acondicionado que cuenta con más de 15 años de experiencia  laboral enfocada en brindar servicios y soluciones integrales en Sistemas de Ventilación Mecánica, Sistemas de Climatización, Refrigeración, etc. Como objetivo base sabemos que, nuestra prioridad es la buena atención puesto que, sabemos que son ustedes nuestros pilares para alcanzar nuestras metas."
+    primaryBtn="Contancta Ahora"
+    primaryBtnURL="/contact"
+    src={heroAboutImage}
+    alt="Instalando un aire acondicionado en un hogar u oficina"
+  />
+
+  <SectionContent
+    title=`¿Por qué elegirnos como su contratista de HVAC en <span class="text-orange-500 dark:text-orange-400">Oslop Telcom</span>?`
+    content="Le ofrecemos soluciones integrales para climatización las 24 Hrs. del día, con soluciones de aplicación avanzada y fiable. No sólo brindamos el desarrollo del proyecto y su implementación, sino que tenemos como objetivo mantener a los equipos completamente operativos y en buenas condiciones durante todos los días del año. Para ello se contempla realizar periódicamente mantenimientos preventivos y atender servicios correctivos en base a las necesidades de los equipos."
+    contentTwo="Contamos con experimentados ingenieros y técnicos, cuya trayectoria en sistemas de instalación de aire acondicionado y ventilación permite suministrar y regular el ambiente de los espacios en diversas variantes de climatización, humidificación, deshumidificación y calefacción."
+  />
+
+  <HeroSectionAlt
+    title="¡No esperes más para disfrutar del confort que te mereces!"
+    subTitle="No dejes que el calor te agobie ni que el aire viciado afecte tu bienestar. En Oslop Telcom, estamos listos para brindarte soluciones de aire acondicionado que transformarán tu espacio en un refugio de frescura y comodidad."
+    url="https://wa.me:+51958826413"
+  />
+
+  <h5
+    class="mb-10 text-center text-4xl font-bold tracking-tight text-gray-900 dark:text-white"
+  >
+    Nuestra Misión y Visión
+  </h5>
+  <div class="mx-auto mb-10 grid max-w-screen-lg grid-cols-2 gap-4">
+    <a
+      class="bg-neutral block max-w-md rounded-lg border border-gray-200 p-6 shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-neutral-800 dark:hover:bg-neutral-700"
+    >
+      <h5
+        class="mb-2 text-center text-3xl font-bold tracking-tight text-gray-900 dark:text-white"
+      >
+        Misión
+      </h5>
+      <p class="text-justify font-normal text-gray-700 dark:text-gray-400">
+        En Oslop Telcom, nuestra misión es proporcionar soluciones integrales de
+        aire acondicionado y calefacción que mejoren la calidad de vida de
+        nuestros clientes. Nos dedicamos a ofrecer servicios de instalación,
+        mantenimiento y reparación con un compromiso inquebrantable con la
+        excelencia, la eficiencia energética y la satisfacción del cliente.
+        Nuestro objetivo es crear ambientes confortables y saludables en hogares
+        y oficinas, combinando tecnología de punta con un servicio personalizado
+        y profesional.
+      </p>
+    </a>
+    <a
+      class="bg-neutral block max-w-md rounded-lg border border-gray-200 p-6 shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-neutral-800 dark:hover:bg-neutral-700"
+    >
+      <h5
+        class="mb-2 text-center text-3xl font-bold tracking-tight text-gray-900 dark:text-white"
+      >
+        Visión
+      </h5>
+      <p class="text-justify font-normal text-gray-700 dark:text-gray-400">
+        Nuestra visión en Oslop Telcom es ser la empresa líder en el sector de
+        climatización, reconocida por nuestra innovación, calidad y
+        responsabilidad ambiental. Aspiramos a expandir nuestras operaciones,
+        ofreciendo soluciones sostenibles y eficientes que contribuyan al
+        bienestar de nuestras comunidades y al cuidado del planeta. Nos
+        esforzamos por mantenernos a la vanguardia de la tecnología y el
+        servicio al cliente, estableciendo nuevos estándares de excelencia en la
+        industria del aire acondicionado y calefacción.
+      </p>
+    </a>
+  </div>
+</MainLayout>

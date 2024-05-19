@@ -1,6 +1,6 @@
 import type { APIRoute, ImageMetadata } from "astro";
 import { getImage } from "astro:assets";
-import icon from "@images/icon.png";
+import icon from "@images/logo_icon_oslop.png";
 import maskableIcon from "@images/icon-maskable.png";
 
 interface Favicon {
@@ -44,8 +44,8 @@ export const GET: APIRoute = async () => {
   );
 
   const manifest = {
-    short_name: "ScrewFast",
-    name: "ScrewFast",
+    short_name: "Oslop Telcom",
+    name: "Oslop Telcom",
     icons,
     display: "minimal-ui",
     id: "/",

@@ -14,6 +14,8 @@ export default {
       white: "#ffffff",
       gray: colors.gray,
       indigo: colors.indigo,
+      blue: colors.blue,
+      green: colors.green,
       neutral: colors.neutral,  // Used mainly for text color
       yellow: {
         50: "#fefce8",

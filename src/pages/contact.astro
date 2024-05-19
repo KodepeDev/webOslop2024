@@ -1,10 +1,12 @@
 ---
 // Import the necessary components
+import MapSection from "@/components/sections/MapSection.astro";
+import AnnouncementBanner from "@/components/ui/banners/AnnouncementBanner.astro";
 import MainLayout from "@/layouts/MainLayout.astro";
 import ContactSection from "@components/sections/ContactSection.astro";
 import { SITE } from "@data/constants";
 
-const pageTitle: string = `Contact | ${SITE.title}`;
+const pageTitle: string = `Contacto | ${SITE.title}`;
 ---
 
 <!--Utilizing MainLayout for the outer layout of the page, and defining meta for SEO purposes-->
@@ -13,20 +15,26 @@ const pageTitle: string = `Contact | ${SITE.title}`;
   structuredData={{
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://screwfast.uk/contact",
-    "url": "https://screwfast.uk/contact",
-    "name": "Contact Us | ScrewFast",
-    "description":
-      "Have questions or want to discuss a project? Reach out, and let's craft the perfect solution with our tools and services.",
-    "isPartOf": {
+    "@id": "https://osloptelcom.com/contact",
+    url: "https://osloptelcom.com/contact",
+    name: "Contáctanos| Oslop Telcom",
+    description:
+      "Quieres contratar a los técnicos de Oslop Telcom para una instalación o mantenimiento de aire acondicionado",
+    isPartOf: {
       "@type": "WebSite",
-      "url": "https://screwfast.uk",
-      "name": "ScrewFast",
-      "description":
-        "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs.",
+      url: "https://osloptelcom.com",
+      name: "Oslop Telcom",
+      description:
+        "Oslop Telcom ofrecemos los mejores servicios de Aire Acondicionado refrigeración y calefacción.",
     },
-    "inLanguage": "en-US"
+    inLanguage: "en-US",
   }}
 >
+  <AnnouncementBanner
+    btnId="dismiss-button"
+    btnTitle="WhatsApp"
+    url="https://github.com/mearashadowfax/ScrewFast"
+  />
   <ContactSection />
+  <MapSection firstNumber="+51 936 802 062" />
 </MainLayout>

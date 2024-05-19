@@ -4,6 +4,7 @@ import vercelStatic from "@astrojs/vercel/static";
 import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 import starlight from "@astrojs/starlight";
+import netlify from '@astrojs/netlify/functions';
 
 // https://astro.build/config
 export default defineConfig({
@@ -111,10 +112,10 @@ export default defineConfig({
       brotli: true,
     }),
   ],
-  output: "static",
+  output: "server",
   experimental: {
     clientPrerender: true,
     directRenderScript: true,
   },
-  adapter: vercelStatic(),
+  adapter: netlify(),
 });

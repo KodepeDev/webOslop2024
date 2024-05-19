@@ -7,15 +7,16 @@ import RightSection from "@components/ui/blocks/RightSection.astro";
 import FeaturesStats from "@components/sections/features/FeaturesStats.astro";
 
 // Import necessary images
-import blueprints from "@images/blueprints-image.avif";
-import personWorking from "@images/person-working.avif";
-import beforeAfter from "@images/before-after.avif";
-import constructionWorkers from "@images/construction-workers.avif";
-import aerialView from "@images/aerial-view.avif";
-import usingTools from "@images/using-tools.avif";
-import progressBuilding from "@images/progress-building.avif";
+import instalacionUno from "@images/servicios/instalacion_de_aire.jpg";
+import instalacionDos from "@images/servicios/instalacion_de_aire_servicio_2.jpg";
+import mantenimiento from "@images/servicios/mantenimiento_aire_servicio.png";
+import reparacionUno from "@images/servicios/reparacion_servicio_1.png";
+import reparacionDos from "@images/servicios/reparacion_servicio_2.png";
+import calefaccion from "@images/servicios/calefaccion_servicio_1.png";
+import monoxidoUno from "@images/servicios/monoxido_servicio_1.jpg";
 import underConstruction from "@images/under-construction.avif";
 import { SITE } from "@data/constants";
+import AnnouncementBanner from "@/components/ui/banners/AnnouncementBanner.astro";
 
 interface Article {
   isRightSection: boolean;
@@ -36,63 +37,63 @@ interface Article {
 const articles: Article[] = [
   {
     isRightSection: true,
-    title: "Delivering Expert Guidance",
+    title: "Instalación de Aire Acondicionado",
     subTitle:
-      "Embarking on a construction project can be overwhelming. With our professional consultation services, we guide you through every stage, ensuring you make informed decisions. Whether you are a DIY enthusiast or a skilled contractor, our experts are on hand to offer tailored advice on product selection, project scope, and compliance with local regulations.",
+      "Ya sea que necesite un sistema de enfriamiento de múltiples etapas o una nueva unidad que funcione más silenciosamente que la anterior, nuestros técnicos pueden ayudarlo a planificar, implementar y mantener su nueva unidad de aire acondicionado, todo ello basado en precios asequibles y soporte técnico sólido.",
     single: false,
-    imgOne: blueprints,
+    imgOne: instalacionUno,
     imgOneAlt: "Blueprints and digital tablet with construction plans.",
-    imgTwo: personWorking,
+    imgTwo: instalacionDos,
     imgTwoAlt: "Person working in the office",
   },
   {
     isRightSection: false,
-    title: "Transforming Designs into Reality",
+    title: "Mantenimiento Preventivo",
     subTitle:
-      "Our skilled craftsmen bring precision and excellence to every construction project. From minor installations to substantial structural work, ScrewFast offers reliable construction services to turn your plans into tangible outcomes. We ensure the highest standards of safety and workmanship, utilizing top-quality tools and materials from our extensive inventory.",
-    img: beforeAfter,
+      "Para prolongar la vida útil y el rendimiento de tu sistema de aire acondicionado, ofrecemos servicios de mantenimiento preventivo periódico. Nuestros técnicos calificados realizarán inspecciones exhaustivas y ajustes necesarios para mantener tu equipo en condiciones óptimas.",
+    img: mantenimiento,
     imgAlt: "Construction site before and after",
-    btnExists: true,
+    btnExists: false,
     btnTitle: "Learn More",
     btnURL: "#",
   },
   {
     isRightSection: true,
-    title: "Navigating Projects with Professional Oversight",
+    title: "Reparaciones Rápidas y Efectivas",
     subTitle:
-      "Effective project management is at the heart of any successful build. ScrewFast provides thorough planning and robust management services that keep your project on time and within budget. Let us handle the complexities of workflow coordination, resource allocation, and stakeholder communication while you focus on your vision.",
+      "¿Experimentas problemas con tu sistema de aire acondicionado? No te preocupes, nuestro equipo está disponible para proporcionarte reparaciones rápidas y efectivas. Diagnóstico preciso, piezas de repuesto de calidad y atención profesional garantizan resultados satisfactorios.",
     single: false,
-    imgOne: constructionWorkers,
+    imgOne: reparacionUno,
     imgOneAlt: "Construction workers orchestrating a project",
-    imgTwo: aerialView,
+    imgTwo: reparacionDos,
     imgTwoAlt: "Aerial view of managed construction",
   },
   {
     isRightSection: false,
-    title: "Ensuring Long-lasting Performance",
+    title: "Instalación de Calefacción",
     subTitle:
-      "Our commitment to your project doesn't end at completion. ScrewFast offers ongoing maintenance and support services to ensure your construction's longevity and performance. From regular check-ups to emergency assistance, our responsive team is there to provide seamless support.",
-    img: usingTools,
+      "Oslop Telcom ofrece un equipo de técnicos en instalación de calefacción especializados y certificados para atender sus necesidades de calefacción. Somos una empresa de calefacción y aire acondicionado a nivel nacional que brinda estos servicios de instalación en todo el país.",
+    img: calefaccion,
     imgAlt:
       "Man in orange and black vest wearing white helmet holding yellow and black power tool",
   },
   {
     isRightSection: true,
-    title: "Crafting Bespoke Strategies for Unique Challenges",
+    title: "Extraccion de Monoxido",
     subTitle:
-      "For our larger enterprise clients, ScrewFast offers custom solutions designed to meet specific industry challenges. By understanding your unique needs, we engineer tailored strategies aimed at optimizing your operations, enhancing efficiency, and driving your business forward.",
+      "La extracción de monóxido de carbono (CO2) de las playas de estacionamientos, aparcamientos, garajes y sótanos. Tiene como objetivo garantizar la no acumulación de monóxido de carbono en los estacionamientos, garantizar la evacuación en caso de incendios y mantener los gases emitidos por los vehículos a niveles mínimos.",
     single: false,
-    imgOne: progressBuilding,
+    imgOne: monoxidoUno,
     imgOneAlt: "In progress building structure",
     imgTwo: underConstruction,
     imgTwoAlt: "Brown and gray building under construction",
-    btnExists: true,
+    btnExists: false,
     btnTitle: "Read more",
     btnURL: "#",
   },
 ];
 
-const pageTitle: string = `Services | ${SITE.title}`;
+const pageTitle: string = `Servicios | ${SITE.title}`;
 ---
 
 <MainLayout
@@ -100,26 +101,33 @@ const pageTitle: string = `Services | ${SITE.title}`;
   structuredData={{
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://screwfast.uk/services",
-    "url": "https://screwfast.uk/services",
-    "name": "Expert Consultation Services | ScrewFast",
-    "description": "Uniting expertise with your vision, ScrewFast provides exceptional service and comprehensive solutions in the hardware and construction industry, from consultation to project completion.",
-    "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://screwfast.uk",
-        "name": "ScrewFast",
-        "description": "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs."
+    "@id": "https://osloptelcom.com/services",
+    url: "https://osloptelcom.com/services",
+    name: "Expertos en Aire Acondicionado | Oslop Telcom",
+    description:
+      "Brindamos una gran variedad de servicios de aire acondicionado de la mas alta calidad para hogar, oficina o centros comerciales.",
+    isPartOf: {
+      "@type": "WebSite",
+      url: "https://osloptelcom.com",
+      name: "Oslop Telcom",
+      description:
+        "Oslop Telcom ofrecemos los mejores servicios de Aire Acondicionado refrigeración y calefacción.",
     },
-    "inLanguage": "en-US"
+    inLanguage: "es_ES",
   }}
 >
+  <AnnouncementBanner
+    btnId="dismiss-button"
+    btnTitle="WhatsApp"
+    url="https://github.com/mearashadowfax/ScrewFast"
+  />
   <!--MainSection is the introductory section of the page, it also contains a CTA button-->
   <MainSection
-    title="Uniting Expertise with Your Vision"
-    subTitle="At ScrewFast, we take pride in providing comprehensive solutions and exceptional service in the hardware and construction industry. Our experienced team is dedicated to supporting your project from inception to completion with a range of specialized services."
+    title="Expertos en Aire Acondicionado y Calefacción"
+    subTitle="No hay nada tan agradable como contar con los expertos de la región trabajando en su unidad de aire acondicionado. Debido a que su sistema de calefacción y refrigeración es una inversión costosa, es imperativo que solo los técnicos más calificados realicen el mantenimiento de su unidad y nadie puede superar la verdadera experiencia de Oslop Telcom. Puede confiar en nosotros para sus servicios de reparación, instalación y mantenimiento de HVAC."
     btnExists={true}
-    btnTitle="Schedule a Consultation"
-    btnURL="#"
+    btnTitle="Contacta Ahora"
+    btnURL="/contact"
   />
   <!-- RightSection and LeftSection contain details about various services along with pertinent imagery.
   They alternate for variety in design.
@@ -130,7 +138,7 @@ const pageTitle: string = `Services | ${SITE.title}`;
   If 'single' is true, it displays one image, otherwise it displays two.
   -->
   {
-    articles.map(article => {
+    articles.map((article) => {
       return article.isRightSection ? (
         <RightSection
           title={article.title}
@@ -159,22 +167,22 @@ const pageTitle: string = `Services | ${SITE.title}`;
   }
   <!--FeaturesStats section showcases essential stats valuable to users-->
   <FeaturesStats
-    title="By the Numbers"
-    subTitle="Our commitment to quality and reliability is evident in every project we undertake. At ScrewFast, we are dedicated to delivering industry-leading services that ensure your construction projects are built to last."
-    mainStatTitle="96%"
-    mainStatSubTitle="of our clients rate their experience with ScrewFast as exceptional"
+    title="Acelere sus proyectos"
+    subTitle="En Oslop Telcom, estamos listos para brindarte soluciones personalizadas y un servicio excepcional que superará tus expectativas."
+    mainStatTitle="99%"
+    mainStatSubTitle="de nuestros clientes califican su experiencia con Oslop Telcom como excepcional"
     stats={[
       {
-        stat: "99.8%",
-        description: "project completion rate",
+        stat: "100%",
+        description: "tasa de finalización del proyecto",
       },
       {
-        stat: "5,000+",
-        description: "successful installations",
+        stat: "500+",
+        description: "instalaciones exitosas",
       },
       {
         stat: "85%",
-        description: "client growth year-over-year",
+        description: "Crecimiento de clientes año tras año",
       },
     ]}
   />

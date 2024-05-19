@@ -6,16 +6,22 @@ import enStrings from "@utils/navigation.ts";
 import frStrings from "@utils/fr/navigation.ts";
 import Icon from "@components/ui/icons/Icon.astro";
 import BrandLogo from "@components/BrandLogo.astro";
+import logoImage from "@images/logo_icon_oslop.png";
 import { SITE } from "@data/constants";
+import Image from "astro/components/Image.astro";
 
 // Select the correct translation based on the page's lang prop:
 const strings = Astro.currentLocale === "fr" ? frStrings : enStrings;
 
 // Define the variables that will be used in this component
-const sectionThreeTitle: string = Astro.currentLocale === "fr" ? "Rester à jour" : "Stay up to date";
-const sectionThreeContent: string = Astro.currentLocale === "fr" ? "Restez informé des derniers outils et des offres exclusives." :
-  "Stay updated with the latest tools and exclusive deals.";
-const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafted by";
+const sectionThreeTitle: string =
+  Astro.currentLocale === "fr" ? "Rester à jour" : "Estar al día";
+const sectionThreeContent: string =
+  Astro.currentLocale === "fr"
+    ? "Restez informé des derniers outils et des offres exclusives."
+    : "Manténgase actualizado con las últimas herramientas y ofertas exclusivas.";
+const crafted: string =
+  Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafted by";
 ---
 
 <footer class="w-full bg-neutral-300 dark:bg-neutral-900">
@@ -25,7 +31,18 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafte
     <div class="grid grid-cols-2 gap-6 md:grid-cols-4 lg:grid-cols-5">
       <div class="col-span-full lg:col-span-1">
         <!-- Brand Logo -->
-        <BrandLogo class="h-auto w-32" />
+        <!-- <BrandLogo class="h-auto w-32" /> -->
+        <Image
+          src={logoImage}
+          alt="asda"
+          class="h-50 w-50 scale-100 object-contain object-center"
+          draggable={"false"}
+          loading={"eager"}
+          format={"avif"}
+        />
+        <span class="mt-2 text-3xl text-blue-950 dark:text-neutral-200"
+          ><b>Oslop </b><span>Telcom</span></span
+        >
       </div>
       <!-- An array of links for Product and Company sections -->
       {
@@ -43,9 +60,9 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafte
                   >
                     {link.name}
                   </a>
-                  {section.section === "Company" && index === 2 ? (
+                  {section.section === "Compañía" && index === 2 ? (
                     <span class="ms-1 inline rounded-lg bg-orange-500 px-2 py-1 text-xs font-bold text-neutral-50">
-                      We're hiring!
+                      Importante!
                     </span>
                   ) : null}
                 </li>
@@ -74,12 +91,13 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafte
     >
       <div class="flex items-center justify-between">
         <p class="text-sm text-neutral-600 dark:text-neutral-400">
-          © <span id="current-year"></span> {SITE.title}. {crafted}
+          © 2024 - <span id="current-year"></span>
+          {SITE.title}. {crafted}
           <a
             class="rounded-lg font-medium underline underline-offset-2 outline-none ring-zinc-500 transition duration-300 hover:text-neutral-700 hover:decoration-dashed focus:outline-none focus-visible:ring dark:ring-zinc-200 dark:hover:text-neutral-300"
-            href="https://sobstvennoai.dev"
+            href="https://kodepe.com"
             target="_blank"
-            rel="noopener noreferrer">sobstvennoAI</a
+            rel="noopener noreferrer">Kodepe</a
           >.
         </p>
       </div>
@@ -91,19 +109,42 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafte
         </FooterSocialLink>
 
         <FooterSocialLink url={strings.socialLinks.x}
-          ><Icon name="xFooter" /></FooterSocialLink
-        >
-
-        <FooterSocialLink url={strings.socialLinks.github}
-          ><Icon name="githubFooter" />
+          ><Icon name="xFooter" />
         </FooterSocialLink>
 
-        <FooterSocialLink url={strings.socialLinks.google}
-          ><Icon name="googleFooter" />
+        <FooterSocialLink url={strings.socialLinks.whatsapp}
+          ><Icon name="whatsappFotter" />
         </FooterSocialLink>
 
-        <FooterSocialLink url={strings.socialLinks.slack}
-          ><Icon name="slackFooter" />
+        <FooterSocialLink url={strings.socialLinks.instagram}>
+          <svg
+            class="h-5 w-5 flex-shrink-0 fill-current text-neutral-700 dark:text-neutral-400"
+            width="48"
+            height="48"
+            viewBox="0 0 100 100"
+            version="1.1"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            ><path
+              class="st140"
+              d="M75.352,18.949c-7.6,0.233-7.598,11.167,0,11.398C82.952,30.114,82.95,19.18,75.352,18.949z"
+            ></path>
+
+            <path
+              class="st140"
+              d="M50,25.547c-13.47,0-24.389,10.948-24.389,24.453c1.285,32.437,47.497,32.428,48.777,0      C74.389,36.495,63.469,25.547,50,25.547z M50,65.873c-8.743,0-15.831-7.107-15.831-15.873c0.834-21.055,30.832-21.05,31.663,0      C65.831,58.767,58.743,65.873,50,65.873z"
+            ></path>
+
+            <path
+              class="st140"
+              d="M97.208,30.418C96.856,13.751,86.252,3.141,69.581,2.792c-4.003-0.386-35.157-0.393-39.163,0      C13.751,3.144,3.141,13.748,2.792,30.419c-0.386,3.997-0.394,35.161,0,39.163c0.311,16.613,11.011,27.316,27.626,27.626      c4.003,0.39,35.157,0.39,39.163,0c5.055-0.231,8.508-1.034,11.529-2.208c10.587-4.229,15.76-13.636,16.098-25.419      C97.594,65.578,97.601,34.424,97.208,30.418z M69.191,88.659c-3.939,0.376-34.441,0.382-38.383,0      c-4.63-0.211-7.145-0.985-8.819-1.635c-14.449-6.702-9.969-20.255-10.65-38.858c0.015-4.321-0.009-13.036,0.001-17.357      c0.577-12.882,6.644-18.846,19.468-19.468c3.944-0.376,34.438-0.382,38.383,0c12.886,0.577,18.844,6.644,19.468,19.467      c0.255,3.079,0.44,19.887,0,28.393C89.134,75.177,88.406,87.722,69.191,88.659z"
+            ></path>
+          </svg>
+        </FooterSocialLink>
+
+        <FooterSocialLink url={strings.socialLinks.tiktok}
+          ><Icon name="titokFotter" />
         </FooterSocialLink>
       </div>
     </div>

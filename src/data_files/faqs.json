@@ -1,29 +1,21 @@
 {
-  "subTitle": "Ask us anything about our brand and products, and get factual responses.",
+  "subTitle": "Pregúntenos cualquier cosa sobre nuestros productos y/o servicios, y obtenga respuestas objetivas.",
   "faqs": [
     {
-      "question": "What types of tools are included in the Starter Kit?",
-      "answer": "The Starter Kit features essential hand and power tools for diverse DIY projects, including hammers, drills, screwdrivers, and a variety of fasteners. It's a curated selection to help beginners and experienced DIYers alike tackle most home improvement tasks."
+      "question": "¿Qué es el mantenimiento de aire acondicionado?",
+      "answer": "El mantenimiento de aire acondicionado es el conjunto de actividades que se realizan para asegurar que un sistema de aire acondicionado funcione correctamente y de manera eficiente. Esto puede incluir tareas como limpieza y cambio de filtros, revisión y lubricación de componentes mecánicos, y comprobación de la refrigeración y el calentamiento del sistema. <br> Realizar el mantenimiento adecuado del aire acondicionado puede ayudar a prolongar su vida útil y a mejorar su eficiencia energética, lo que puede resultar en un ahorro significativo en las facturas de energía."
     },
     {
-      "question": "Can I upgrade from the Starter Kit to the Professional Toolbox?",
-      "answer": "Absolutely! You can upgrade to the Professional Toolbox at any time to access a wider range of high-quality tools, enjoy priority customer support, and receive exclusive content. Contact our support team for a seamless transition."
+      "question": "¿Cuánto tiempo hay que darle mantenimiento al aire acondicionado?",
+      "answer": "La frecuencia del mantenimiento del aire acondicionado depende del tipo de sistema que tengas y de las condiciones en las que se utilice. En general, se recomienda realizar un mantenimiento completo del sistema al menos una vez al año, preferiblemente antes de la temporada de mayor uso. Además, es importante realizar tareas de mantenimiento preventivo más frecuentes, como cambiar o limpiar los filtros de aire, para asegurar un correcto funcionamiento del sistema y evitar problemas."
     },
     {
-      "question": "What discounts are available for bulk orders through the Professional Toolbox plan?",
-      "answer": "Professional Toolbox members are entitled to exclusive discounts on bulk orders, the percentage of which may vary depending on the order volume. Get in touch with us to discuss your needs, and we'll provide a tailored discount structure."
+      "question": "¿Cómo saber si el aire acondicionado necesita mantenimiento?",
+      "answer": "Hay algunas señales que pueden indicar que el aire acondicionado necesita mantenimiento. Algunas de ellas son:<br> <ul class='text-pretty text-neutral-600 dark:text-neutral-400'><li>El aire acondicionado tarda más en enfriar o calentar el ambiente.</li><li>El aire acondicionado produce un ruido anormal.</li><li>El aire acondicionado tiene mal olor.</li><li>El aire acondicionado está obstruido por polvo o suciedad.</li><li>El aire acondicionado no está enfriando o calentando como debería.</li><li>Si observas alguna de estas señales, es posible que tu aire acondicionado necesite mantenimiento.</li></ul>"
     },
     {
-      "question": "What kind of customer support can I expect?",
-      "answer": "All our customers receive dedicated email support. With the Starter Kit, you'll receive our standard support, while the Professional Toolbox plan upgrades you to priority support, meaning faster response times and specialized assistance."
-    },
-    {
-      "question": "How current are the online resources and tutorials?",
-      "answer": "We regularly update our online resources and tutorials to reflect the latest trends in DIY and construction, as well as introductions to new tools and techniques. Our material aims to be comprehensive and user-friendly for all skill levels."
-    },
-    {
-      "question": "Does ScrewFast offer services for large-scale construction projects?",
-      "answer": "Yes, our Enterprise Solutions are designed for larger companies requiring comprehensive services. We provide consultation, planning, and supply of high-grade tools and materials, as well as staffing solutions for substantial construction needs. Contact us for a customized quote."
+      "question": "¿Cuánto cuesta el mantenimiento del aire acondicionado?",
+      "answer": "El costo del mantenimiento del aire acondicionado puede variar dependiendo de factores como el tipo de sistema que tengas, la ubicación geográfica, la complejidad de la tarea y el técnico que realice el mantenimiento. Los precios pueden variar mucho más dependiendo de las circunstancias. Algunos técnicos pueden ofrecer paquetes de mantenimiento a precios más bajos si contratas varias visitas de mantenimiento al año. Es importante comparar precios y obtener varias cotizaciones antes de tomar una decisión sobre quién debe realizar el mantenimiento de tu aire acondicionado."
     }
   ]
 }

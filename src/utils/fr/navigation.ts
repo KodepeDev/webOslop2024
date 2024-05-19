@@ -28,11 +28,11 @@ const footerLinks = [
 ];
 
 const socialLinks = {
-  facebook: "#",
+  facebook: "https://www.facebook.com/profile.php?id=100047636532038",
   x: "#",
-  github: "https://github.com/mearashadowfax/ScrewFast",
-  google: "#",
-  slack: "#",
+  whatsapp: "wa.link/tigzud",
+  instagram: "#",
+  tiktok: "https://www.tiktok.com/@osloptelcom?is_from_webapp=1&sender_device=pc",
 };
 
 export default {

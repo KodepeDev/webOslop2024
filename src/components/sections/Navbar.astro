@@ -3,6 +3,8 @@
 import ThemeIcon from "@components/ThemeIcon.astro";
 import NavLink from "@components/ui/links/NavLink.astro";
 import Authentication from "./Authentication.astro";
+import logoImage from "@images/logo_icon_oslop.png";
+import Image from "astro/components/Image.astro";
 import enStrings from "@utils/navigation.ts";
 import frStrings from "@utils/fr/navigation.ts";
 import BrandLogo from "@components/BrandLogo.astro";
@@ -22,14 +24,25 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
     class="relative mx-2 w-full rounded-[36px] border border-yellow-100/40 bg-yellow-50/60 px-4 py-3 backdrop-blur-md dark:border-neutral-700/40 dark:bg-neutral-800/80 dark:backdrop-blur-md md:flex md:items-center md:justify-between md:px-6 md:py-0 lg:px-8 xl:mx-auto"
     aria-label="Global"
   >
-    <div class="flex items-center justify-between">
+    <div class="flex w-full items-center justify-between py-3">
       <!-- Brand logo -->
       <a
-        class="flex-none rounded-lg text-xl font-bold outline-none ring-zinc-500 focus-visible:ring dark:ring-zinc-200 dark:focus:outline-none"
+        class="flex rounded-lg text-xl font-bold outline-none ring-zinc-500 focus-visible:ring dark:ring-zinc-200 dark:focus:outline-none"
         href={homeUrl}
         aria-label="Brand"
       >
-        <BrandLogo class="h-auto w-24" />
+        <!-- <BrandLogo class="h-auto w-24" /> -->
+        <Image
+          src={logoImage}
+          alt="asda"
+          class="h-50 w-50 scale-100 object-contain object-center"
+          draggable={"false"}
+          loading={"eager"}
+          format={"avif"}
+        />
+        <span class="text-blue-950 mt-1 px-2 text-3xl dark:text-neutral-200"
+          ><b>Oslop </b><span>Telcom</span></span
+        >
       </a>
       <!-- Collapse toggle for smaller screens -->
       <div class="ml-auto mr-5 md:hidden">
@@ -83,15 +96,17 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
     >
       <!-- Navigation links container -->
       <div
-        class="mt-5 flex flex-col gap-x-0 gap-y-4 md:mt-0 md:flex-row md:items-center md:justify-end md:gap-x-4 lg:gap-x-7 md:gap-y-0 md:ps-7"
+        class="mt-5 flex flex-col gap-x-0 gap-y-4 md:mt-0 md:flex-row md:items-center md:justify-end md:gap-x-4 md:gap-y-0 md:ps-7 lg:gap-x-7"
       >
         <!-- Navigation links and Authentication component -->
-        {strings.navBarLinks.map(link => (
-          <NavLink url={link.url} name={link.name} />
-        ))}
+        {
+          strings.navBarLinks.map((link) => (
+            <NavLink url={link.url} name={link.name} />
+          ))
+        }
 
-        <Authentication />
-        <LanguagePicker />
+        <!-- <Authentication /> -->
+        <!-- <LanguagePicker /> -->
         <!-- ThemeIcon component specifically for larger screens -->
         <span class="hidden md:inline-block">
           <ThemeIcon />
@@ -144,7 +159,7 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
 
       if (dispatchEvent) {
         window.dispatchEvent(
-          new CustomEvent("on-hs-appearance-change", { detail: theme }),
+          new CustomEvent("on-hs-appearance-change", { detail: theme })
         );
       }
     },
@@ -174,10 +189,10 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
 
   window.addEventListener("load", () => {
     const $clickableThemes = document.querySelectorAll(
-      "[data-hs-theme-click-value]",
+      "[data-hs-theme-click-value]"
     );
     const $switchableThemes = document.querySelectorAll(
-      "[data-hs-theme-switch]",
+      "[data-hs-theme-switch]"
     );
 
     $clickableThemes.forEach(($item) => {
@@ -185,8 +200,8 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
         HSThemeAppearance.setAppearance(
           $item.getAttribute("data-hs-theme-click-value"),
           true,
-          $item,
-        ),
+          $item
+        )
       );
     });
 

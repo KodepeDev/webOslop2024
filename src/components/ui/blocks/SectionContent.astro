@@ -1,0 +1,35 @@
+---
+// Destructure the props passed to the Astro component
+const { title, content, contentTwo } = Astro.props;
+// Define TypeScript interface for props
+interface Props {
+  title: string;
+  content: string;
+  contentTwo: string;
+}
+---
+
+<!-- Root section of the component -->
+<section
+  class="mx-auto mt-2 px-4 py-5 text-center sm:px-6 sm:py-16 lg:px-8 lg:py-14 2xl:max-w-full"
+>
+  <div class="mx-auto max-w-screen-lg">
+    <!-- Section title -->
+    <h1
+      class="mb-8 text-balance text-5xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200"
+    >
+      <Fragment set:html={title} />
+    </h1>
+    <!-- Section subtitle -->
+    <p
+      class="mb-8 text-justify font-light text-neutral-600 dark:text-neutral-400 sm:text-xl"
+    >
+      <Fragment set:html={content} />
+    </p>
+    <p
+      class="mb-8 text-justify font-light text-neutral-600 dark:text-neutral-400 sm:text-xl"
+    >
+      <Fragment set:html={contentTwo} />
+    </p>
+  </div>
+</section>

@@ -5,7 +5,10 @@ import GithubBtn from "@components/ui/buttons/GithubBtn.astro";
 // Define props from Astro
 const { title, subTitle, url } = Astro.props;
 
-const btnTitle = Astro.currentLocale === "fr" ? "Continuer avec Github" : "Continue with Github";
+const btnTitle =
+  Astro.currentLocale === "fr"
+    ? "Continuer avec Github"
+    : "Contacta por WhatsApp";
 
 // Define TypeScript interface for props
 interface Props {
@@ -119,7 +122,7 @@ interface Props {
   <!-- Hero Section Heading -->
   <div class="mx-auto mt-5 max-w-xl text-center">
     <h2
-      class="block text-balance text-4xl font-bold leading-tight tracking-tight text-neutral-800 dark:text-neutral-200 md:text-5xl lg:text-6xl"
+      class="block text-balance text-3xl font-bold leading-tight tracking-tight text-neutral-800 dark:text-neutral-200 md:text-4xl lg:text-6xl"
     >
       {title}
     </h2>
@@ -138,7 +141,7 @@ interface Props {
   {
     url && (
       <div class="mt-8 flex justify-center gap-3">
-        <GithubBtn url={url} title={btnTitle}/>
+        <GithubBtn url={url} title={btnTitle} />
       </div>
     )
   }

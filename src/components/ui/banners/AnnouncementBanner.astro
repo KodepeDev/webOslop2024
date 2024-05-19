@@ -7,11 +7,14 @@ interface Props {
   btnTitle: string;
   url: string;
 }
+const facebookUrl = "https://www.facebook.com/profile.php?id=100047636532038";
+const facebookTitle = "Facebook";
+const url2 = "wa.link/tigzud";
 ---
 
 <astro-banner btnId={btnId}>
   <div
-    class="fixed bottom-0 start-1/2 z-50 mx-auto w-full -translate-x-1/2 transform p-6 sm:max-w-4xl"
+    class="fixed bottom-0 start-1/2 z-50 mx-auto w-full -translate-x-1/2 transform p-6 sm:max-w-2xl"
     role="region"
     aria-label="Informational Banner"
   >
@@ -20,30 +23,72 @@ interface Props {
     >
       <div class="flex items-center justify-center">
         <div class="ml-auto">
-          {title &&
-          <p
-            class="me-2 inline-block font-medium text-neutral-50 dark:text-neutral-700"
-          >
-            {title}
-          </p>
+          {
+            title && (
+              <p class="me-2 inline-block font-medium text-neutral-50 dark:text-neutral-700">
+                {title}
+              </p>
+            )
           }
           <a
-            class="group inline-flex items-center gap-x-2 rounded-full border-2 border-neutral-50 backdrop-brightness-75 sm:backdrop-brightness-100 px-3 py-2 text-sm font-semibold text-neutral-50 transition duration-300 hover:border-neutral-100/70 hover:text-neutral-50/70 disabled:pointer-events-none disabled:opacity-50 dark:backdrop-brightness-100 dark:border-neutral-700 dark:text-neutral-700 dark:hover:border-neutral-700/70 dark:hover:text-neutral-800/70 dark:focus:outline-none"
-            href={url}
+            class="group inline-flex items-center gap-x-2 rounded-full border-2 border-neutral-50 px-3 py-2 text-sm font-semibold text-neutral-50 backdrop-brightness-75 transition duration-300 hover:border-neutral-100/70 hover:text-neutral-50/70 disabled:pointer-events-none disabled:opacity-50 dark:border-neutral-700 dark:text-neutral-700 dark:backdrop-brightness-100 dark:hover:border-neutral-700/70 dark:hover:text-neutral-800/70 dark:focus:outline-none sm:backdrop-brightness-100"
+            href={facebookUrl}
+            target="_blank"
+          >
+            {facebookTitle}
+            <svg
+              width="25"
+              height="25"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              ><path
+                fill="#1877F2"
+                d="M15 8a7 7 0 00-7-7 7 7 0 00-1.094 13.915v-4.892H5.13V8h1.777V6.458c0-1.754 1.045-2.724 2.644-2.724.766 0 1.567.137 1.567.137v1.723h-.883c-.87 0-1.14.54-1.14 1.093V8h1.941l-.31 2.023H9.094v4.892A7.001 7.001 0 0015 8z"
+              ></path><path
+                fill="#ffffff"
+                d="M10.725 10.023L11.035 8H9.094V6.687c0-.553.27-1.093 1.14-1.093h.883V3.87s-.801-.137-1.567-.137c-1.6 0-2.644.97-2.644 2.724V8H5.13v2.023h1.777v4.892a7.037 7.037 0 002.188 0v-4.892h1.63z"
+              ></path></svg
+            >
+          </a>
+
+          <a
+            class="group inline-flex items-center gap-x-2 rounded-full border-2 border-neutral-50 px-3 py-2 text-sm font-semibold text-neutral-50 backdrop-brightness-75 transition duration-300 hover:border-neutral-100/70 hover:text-neutral-50/70 disabled:pointer-events-none disabled:opacity-50 dark:border-neutral-700 dark:text-neutral-700 dark:backdrop-brightness-100 dark:hover:border-neutral-700/70 dark:hover:text-neutral-800/70 dark:focus:outline-none sm:backdrop-brightness-100"
+            href={url2}
             target="_blank"
           >
             {btnTitle}
             <svg
-              class="size-4 flex-shrink-0 transition duration-300 group-hover:translate-x-1"
-              width="24"
               height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg
+              width="24"
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 512 512"
+              xml:space="preserve"
             >
+              <path
+                style="fill:#EDEDED;"
+                d="M0,512l35.31-128C12.359,344.276,0,300.138,0,254.234C0,114.759,114.759,0,255.117,0
+	S512,114.759,512,254.234S395.476,512,255.117,512c-44.138,0-86.51-14.124-124.469-35.31L0,512z"
+              ></path>
+              <path
+                style="fill:#55CD6C;"
+                d="M137.71,430.786l7.945,4.414c32.662,20.303,70.621,32.662,110.345,32.662
+	c115.641,0,211.862-96.221,211.862-213.628S371.641,44.138,255.117,44.138S44.138,137.71,44.138,254.234
+	c0,40.607,11.476,80.331,32.662,113.876l5.297,7.945l-20.303,74.152L137.71,430.786z"
+              ></path>
+              <path
+                style="fill:#FEFEFE;"
+                d="M187.145,135.945l-16.772-0.883c-5.297,0-10.593,1.766-14.124,5.297
+	c-7.945,7.062-21.186,20.303-24.717,37.959c-6.179,26.483,3.531,58.262,26.483,90.041s67.09,82.979,144.772,105.048
+	c24.717,7.062,44.138,2.648,60.028-7.062c12.359-7.945,20.303-20.303,22.952-33.545l2.648-12.359
+	c0.883-3.531-0.883-7.945-4.414-9.71l-55.614-25.6c-3.531-1.766-7.945-0.883-10.593,2.648l-22.069,28.248
+	c-1.766,1.766-4.414,2.648-7.062,1.766c-15.007-5.297-65.324-26.483-92.69-79.448c-0.883-2.648-0.883-5.297,0.883-7.062
+	l21.186-23.834c1.766-2.648,2.648-6.179,1.766-8.828l-25.6-57.379C193.324,138.593,190.676,135.945,187.145,135.945"
+              ></path>
+            </svg>
           </a>
         </div>
         <button
