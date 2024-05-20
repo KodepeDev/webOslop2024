@@ -7,6 +7,7 @@ import starlight from "@astrojs/starlight";
 
 import netlify from "@astrojs/netlify";
 import netlify from '@astrojs/netlify/functions';
+import vercelStatic from '@astrojs/vercel/static';
 
 // https://astro.build/config
 export default defineConfig({
@@ -136,5 +137,5 @@ export default defineConfig({
     clientPrerender: true,
     directRenderScript: true
   },
-  adapter: netlify()
+  adapter: vercelStatic(),
 });
